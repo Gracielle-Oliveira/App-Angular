@@ -1,0 +1,47 @@
+.content {
+    position: absolute;
+    margin: 0 auto;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    background-color:white;
+    width: 50%;
+    right: 50%;
+    margin-right:  -25%;
+    top: 15%;
+    flex-direction: column;
+}
+
+.header{
+    background: linear-gradient(#363758, #252638);
+    padding: 25px 15px 25px 15px;
+    width: 100%;
+    color: white;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.header span{
+    color: #cedc39;
+}
+
+.btn-close{
+    right: 5px;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 5px;
+    cursor: pointer;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 25px 15px 25px 15px;
+}

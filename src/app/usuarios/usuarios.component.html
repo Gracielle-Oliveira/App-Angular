@@ -1,0 +1,36 @@
+<app-modal [selectedUser]="selectedUser" (onCloseModal)="clmodal( $event )" ></app-modal>
+
+<div class="content" *ngIf="showMessage">
+    <div class="header">
+        Recibo de pagamento 
+    </div>
+    <div class="btn-close" (click)="closeMsg()">
+        
+    </div>
+    <div class="card-content" [innerHTML]="message">
+        
+    </div>
+</div>
+
+
+<div class="listagem" *ngFor="let u of list; let i = index;">
+    <div class="imagem">
+        <img [src]="u.img" />
+    </div>
+    <div class="informe">
+        <span>
+            Nome do Usuário: {{u.name}}
+        </span>
+        <span>
+            ID: {{u.id}} - Username: {{u.username}}
+        </span>
+    </div>
+    <div class="btn">
+        <button (click)="iniciarPagamento(u)" >
+            PAGAR
+        </button>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,18 @@
+<div class="content" *ngIf="selectedUser.id">
+    <div class="header">
+        Pagamentos para <span>{{selectedUser.name}} </span>
+    </div>
+    <div class="btn-close" (click)="closeModal()">
+        X
+    </div>
+    <div class="card-content">
+        <input placeholder="Digite o valor - R$ 0,00" name="valueTransaction" [(ngModel)]="vtrans" />
+        <select id="cardSelect" name="cardSelect" [(ngModel)]="cardSelected">
+        <option>select</option>
+        <option *ngFor="let card of cards" > Cartão com final {{card.card_number | showLastDigits}} </option>
+        </select>
+        <button (click)="makeTransaction()" >
+            Pagar
+        </button>
+    </div>
+</div>

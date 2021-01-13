@@ -1,0 +1,36 @@
+.listagem{
+    background: linear-gradient(#363758, #252638);
+    padding: 25px 15px 25px 50px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    position: relative;
+}
+
+.imagem{
+    width: fit-content;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15 px;
+}
+
+.informe{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    
+}
+
+.btn {
+    float: right;
+    right: 20px;
+    position: absolute;
+}
+
+.btn button{
+    font-size: 25px;
+}
