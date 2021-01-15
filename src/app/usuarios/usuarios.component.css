@@ -1,0 +1,53 @@
+.listagem {
+  background: -webkit-gradient(linear, left top, left bottom, from(#363758), to(#252638));
+  background: linear-gradient(#363758, #252638);
+  padding: 25px 15px 25px 50px;
+  margin-bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-radius: 2%;
+}
+
+.imagem {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15 px;
+}
+
+.informe {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 25px;
+}
+
+.btn {
+  float: right;
+  right: 30px;
+  position: absolute;
+}
+
+.btn button {
+  font-size: 25px;
+}
+/*# sourceMappingURL=usuarios.component.css.map */

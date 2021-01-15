@@ -6,10 +6,9 @@
         X
     </div>
     <div class="card-content">
-        <input placeholder="Digite o valor - R$ 0,00" name="valueTransaction" [(ngModel)]="vtrans" />
+        <input mask="0*,00" placeholder="Digite o valor - 0,00" name="valueTransaction" [(ngModel)]="vtrans" />
         <select id="cardSelect" name="cardSelect" [(ngModel)]="cardSelected">
-        <option>select</option>
-        <option *ngFor="let card of cards" > Cartão com final {{card.card_number | showLastDigits}} </option>
+        <option *ngFor="let card of cards" [value]="card.card_number" > Cartão com final {{card.card_number | showLastDigits}} </option>
         </select>
         <button (click)="makeTransaction()" >
             Pagar

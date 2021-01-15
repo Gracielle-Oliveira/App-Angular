@@ -19,12 +19,15 @@ export class UsuariosComponent implements OnInit {
     this.showMessage = !this.showMessage
   }
   
+  //Endpoint para conexão da API da lista de usuários//
   ngOnInit(): void {
     this.http.get('https://www.mocky.io/v2/5d531c4f2e0000620081ddce').toPromise().then((users) => {
       this.list = users;
     })
   }
 
+  //Informações da escolha de pagamento e aprovação
+  
   iniciarPagamento(p:string) {
     this.selectedUser = p;
   }  
@@ -37,6 +40,8 @@ export class UsuariosComponent implements OnInit {
       return
     }
 
+    this.selectedUser = {}
+
     switch (response.status){
       case 'cancel':
       break;
@@ -45,13 +50,6 @@ export class UsuariosComponent implements OnInit {
         this.message = "O pagamento foi concluído com sucesso."
         this.closeMsg ()
         break;
-
-      default:
-        this.message = "<span>O pagamento não foi concluído com sucesso.</span>"
-        this.closeMsg ()
-        break;
+      }
     }
-    this.selectedUser = {}
   }
-
-}

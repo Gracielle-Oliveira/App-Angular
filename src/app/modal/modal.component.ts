@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+// Carateres para a construção dos detalhes para validação //
 interface TransactionPayload {
   // Card Info
   card_number: string;
@@ -58,6 +59,7 @@ export class ModalComponent implements OnInit {
     this.onCloseModal.emit(response)
   }
 
+  //Método Post para validação de dados do cartão//
   makeTransaction() {
 
     let cdFull = this.cards.filter((card: any) => {
@@ -77,6 +79,8 @@ export class ModalComponent implements OnInit {
 
     this.http.post('https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989', transaction).toPromise().then((response) => {
       console.log(response)
+      this.closeModal(response)
     })
   }
 }
+
